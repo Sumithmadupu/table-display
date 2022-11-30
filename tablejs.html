@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Table</title>
+    <style>
+        .button{
+            text-align: center;
+        }
+        table,tr,td{
+            border:2px solid black;
+            margin:auto;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="button">
+    <button onclick="tableFun()"><h4>click here to see table content</h4></button>
+    <p id="demo"><bold>table appears here</bold></p>
+    </div>
+    <script>
+        function tableFun(){
+        const arr=["Anakin","Obi-wan","Luke","Leia"];
+        let text="<table>";
+            for(let i=0;i<arr.length;i++){
+                text+="<tr>";
+                text+="<td>"+(i+1)+"</td>"+"<td>"+arr[i]+"</td>";
+                text+="</tr>";
+            }
+            text+="</table>";
+            document.getElementById("demo").innerHTML=text;
+        }
+    </script>
+</body>
+</html>
